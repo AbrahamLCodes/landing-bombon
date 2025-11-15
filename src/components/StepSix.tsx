@@ -28,7 +28,7 @@ export default function StepSix({ onRestart, onBack }: Props) {
   const heartColors = ["text-pink-500", "text-red-500", "text-amber-400"];
 
   useEffect(() => {
-    const generated = Array.from({ length: 200 }, (_, i) => ({
+    const generated = Array.from({ length: 100 }, (_, i) => ({
       id: i,
       left: Math.random() * 100,
       delay: Math.random() * 4,
@@ -134,13 +134,13 @@ export default function StepSix({ onRestart, onBack }: Props) {
           {showMessage && (
             <motion.p
               key="love-message"
-              className="text-2xl font-semibold text-pink-600 mt-4 mb-8"
+              className="text-2xl sm:text-4xl font-bold text-white mt-4 mb-8 px-4 py-2 bg-orange-600/60 rounded-lg backdrop-blur-md shadow-xl"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 1 }}
             >
-              Excelente decisión, el inicio de algo bonito 💞
+              ¡Aceptaste, excelente decisión! <br /> <br /> El inicio de algo bonito 💞
             </motion.p>
           )}
         </AnimatePresence>
@@ -162,7 +162,7 @@ export default function StepSix({ onRestart, onBack }: Props) {
         </AnimatePresence>
 
         {/* 📸 Upload UI */}
-        <AnimatePresence>
+        {/* <AnimatePresence>
           {showUpload && (
             <motion.div
               key="upload"
@@ -197,7 +197,7 @@ export default function StepSix({ onRestart, onBack }: Props) {
               )}
             </motion.div>
           )}
-        </AnimatePresence>
+        </AnimatePresence> */}
 
         {/* 🫥 Invisible functional buttons (for build/logic refs) */}
         <div className="hidden">
