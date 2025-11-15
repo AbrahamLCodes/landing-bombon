@@ -18,8 +18,6 @@ interface Heart {
 
 export default function StepSix({ onRestart, onBack }: Props) {
   const [showHearts, setShowHearts] = useState(false);
-  const [photo, setPhoto] = useState<File | null>(null);
-  const [showUpload, setShowUpload] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const [showMainContent, setShowMainContent] = useState(true);
   const [showNoMessage, setShowNoMessage] = useState(false);
@@ -44,7 +42,6 @@ export default function StepSix({ onRestart, onBack }: Props) {
     setShowMainContent(false);
     setShowHearts(true);
     setTimeout(() => setShowMessage(true), 1000);
-    setTimeout(() => setShowUpload(true), 2500);
   };
 
   const handleNoClick = () => {
